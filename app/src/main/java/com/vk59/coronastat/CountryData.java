@@ -8,7 +8,7 @@ public class CountryData {
 
     @SerializedName("info")
     @Expose(deserialize = false, serialize = false)
-    private JsonObject info;
+    private Info info;
     @SerializedName("total_cases")
     @Expose
     private int totalCases;
@@ -37,11 +37,11 @@ public class CountryData {
     @Expose
     private int totalDangerRank;
 
-    public JsonObject getInfo() {
+    public Info getInfo() {
         return info;
     }
 
-    public void setInfo(JsonObject info) {
+    public void setInfo(Info info) {
         this.info = info;
     }
 
@@ -119,15 +119,16 @@ public class CountryData {
 
     @Override
     public String toString() {
-        return new StringBuilder().append("info" + info).append("totalCases" + totalCases)
-                .append("totalRecovered" + totalRecovered)
-                .append("totalUnresolved" + totalUnresolved)
-                .append("totalDeaths" + totalDeaths)
-                .append("totalNewCasesToday" + totalNewCasesToday)
-                .append("totalNewDeathsToday" + totalNewDeathsToday)
-                .append("totalActiveCases" + totalActiveCases)
-                .append("totalSeriousCases"+ totalSeriousCases)
-                .append("totalDangerRank"+ totalDangerRank).toString();
+
+        return "Country: " + info.getTitle() + "\nTotal cases: " + totalCases +
+                "\nTotal recovered: " + totalRecovered +
+                "\nTotal unresolved: " + totalUnresolved +
+                "\nTotal deaths: " + totalDeaths +
+                "\nNew cases today: " + totalNewCasesToday +
+                "\nNew deaths today: " + totalNewDeathsToday +
+                "\nTotal active cases: " + totalActiveCases +
+                "\nTotal serious cases: " + totalSeriousCases +
+                "\nTotal danger rank: " + totalDangerRank;
     }
 
 }
