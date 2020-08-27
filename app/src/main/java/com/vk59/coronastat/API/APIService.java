@@ -1,6 +1,6 @@
 package com.vk59.coronastat.API;
 
-import com.vk59.coronastat.ResponseData;
+import com.vk59.coronastat.model.ResponseData;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

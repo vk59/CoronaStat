@@ -1,8 +1,9 @@
 
-package com.vk59.coronastat;
+package com.vk59.coronastat.model;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
+import com.vk59.coronastat.model.CountryData;
 
 public class ResponseData {
 
