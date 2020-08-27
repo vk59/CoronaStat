@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoronaStat</string>
+    <string name="message_failure">Something went wrong</string>
+    <string name="failure_answer">Retry</string>
 </resources>
