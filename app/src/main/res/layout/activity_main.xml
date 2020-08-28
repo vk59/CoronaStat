@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-        <variable
-            name="presenter"
-            type="com.vk59.coronastat.presenter.MainPresenter" />
-    </data>
-
 
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
     android:id="@+id/layoutRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:refreshing="@{presenter.isLoading}"
-    app:onRefreshListener="@{() -> presenter.loadData()}"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
 
@@ -29,10 +19,10 @@
     tools:context=".view.MainActivity">
 
     <TextView
+        android:id="@+id/textStatistics"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="28sp"
-        android:text="@{presenter.countryData[0].toString()}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -42,5 +32,3 @@
 </LinearLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-</layout>
